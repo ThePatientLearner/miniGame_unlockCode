@@ -38,6 +38,8 @@ body {
     margin: 0 auto; /* Centra el canvas horizontalmente */
   }
 
-  audio {
+  #miAudio {
     width: 100%;
+    display: none;
   }
+

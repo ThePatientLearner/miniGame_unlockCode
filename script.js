@@ -9,7 +9,7 @@ let juegoIniciado = false;
 function iniciarJuego() {
   juegoIniciado = true;
   setInterval(actualizarJuego, 1000 / 100); // 60 fps
-  setInterval(generarCirculo, 300);
+  setInterval(generarCirculo, 250);
   setInterval(contarTiempo, 1000);
   document.addEventListener("keydown", moverJugador);
 }
@@ -34,22 +34,18 @@ function dibujarJugador() {
 
 function moverJugador(evento) {
   if (juegoIniciado) {
-    if (evento.key === "ArrowLeft" && jugador.x - jugador.velocidad > 0) {
-      jugador.x -= jugador.velocidad*8;
-    } else if (evento.key === "ArrowRight" && jugador.x + jugador.velocidad < canvas.width - jugador.ancho / 2) {
-      jugador.x += jugador.velocidad * 8;
+    if (evento.key === "ArrowLeft" && jugador.x - jugador.velocidad - jugador.ancho / 2 > 0) {
+      jugador.x -= jugador.velocidad * 6;
+    } else if (evento.key === "ArrowRight" && jugador.x + jugador.velocidad + jugador.ancho / 2 < canvas.width) {
+      jugador.x += jugador.velocidad * 6;
     }
-    
-    }
-    else if (evento.key === "ArrowLeft" && jugador.x + jugador.velocidad < canvas.width - jugador.ancho / 2) {
-      jugador.x -= jugador.velocidad * 8;
-    }
-  
+  }
 }
+
 
 function generarCirculo() {
   const radio =30;
-  const velocidad = Math.random() * 2 + 1 + (60 - segundosRestantes) / 10; // velocidad aumenta con el tiempo
+  const velocidad = Math.random() * 2.5 + 1 + (60 - segundosRestantes) / 10; // velocidad aumenta con el tiempo
   const posX = Math.random() * (canvas.width - radio * 2) + radio;
   const posY = -radio;
   circulos.push({ x: posX, y: posY, radio: radio, velocidad: velocidad });
