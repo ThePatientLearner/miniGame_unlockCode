@@ -36,10 +36,15 @@ function moverJugador(evento) {
   if (juegoIniciado) {
     if (evento.key === "ArrowLeft" && jugador.x - jugador.velocidad > 0) {
       jugador.x -= jugador.velocidad*8;
-    } else if (evento.key === "ArrowRight" && jugador.x + jugador.velocidad < canvas.width) {
-      jugador.x += jugador.velocidad*3;
+    } else if (evento.key === "ArrowRight" && jugador.x + jugador.velocidad < canvas.width - jugador.ancho / 2) {
+      jugador.x += jugador.velocidad * 8;
     }
-  }
+    
+    }
+    else if (evento.key === "ArrowLeft" && jugador.x + jugador.velocidad < canvas.width - jugador.ancho / 2) {
+      jugador.x -= jugador.velocidad * 8;
+    }
+  
 }
 
 function generarCirculo() {
@@ -103,5 +108,5 @@ function reiniciarJuego() {
 
 function ganarJuego() {
   juegoIniciado = false;
-  alert("PREMIO! Lol rp codigo: EPAQ4MQ47NW");
+  alert("PREMIO! Lol rp codigo: EPAQ4MQ47NW (Winner Winner Chicken Dinner!)");
 }
