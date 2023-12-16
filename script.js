@@ -103,5 +103,5 @@ function reiniciarJuego() {
 
 function ganarJuego() {
   juegoIniciado = false;
-  alert("¡Winner winner chicken dinner: Lol rp ()");
+  alert("PREMIO! Lol rp codigo: EPAQ4MQ47NW");
 }

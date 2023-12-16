@@ -15,24 +15,27 @@ body {
     text-align: center;
     justify-content: center;
   }
-
   body {
     margin: 0;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-size: 20px; /* Cambia el tamaño del texto del botón */
-    padding: 15px 20px; /* Ajusta el relleno del botón para hacerlo más grande */
+    text-align: center;
   }
-  
+
+  button {
+    margin-bottom: 20px;
+  }
+
   canvas {
     border: 1px solid #000; /* Añade un borde al canvas para visualización */
+    max-width: 100%;
+    margin: 0 auto; /* Centra el canvas horizontalmente */
   }
-  
-  iframe {
-    width: 400px; /* Ajusta el ancho del video según tus preferencias */
-    height: 300px; /* Ajusta la altura del video según tus preferencias */
+
+  audio {
+    width: 100%;
   }
-  
