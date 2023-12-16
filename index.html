@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego Triángulo Azul</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button onclick="iniciarJuego(),reproducirAudio()">Iniciar Juego</button>
+  <canvas id="juegoCanvas" width="800" height="600"></canvas>
+  <br>
+  <audio id ="miAudio" controls autoplay start="55">
+    <source src="./Ameno (Dorime) 1 Hour Full Version (128  kbps).mp3"  type="audio/mp3">
+    Tu navegador no soporta la etiqueta de audio.
+  </audio>
+
+
+
+  <script src="script.js"></script>
+  <script>
+  function reproducirAudio() {
+    const miAudio = document.getElementById("miAudio");
+    miAudio.currentTime = 55;
+    miAudio.play();
+  }
+</script>
+</body>
+</html>

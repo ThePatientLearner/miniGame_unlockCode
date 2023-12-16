@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    flex: auto;
+  }
+
+  canvas {
+    display: block;
+    border: 1px solid black;
+  }
+
+  #juegoCanvas{
+    border: 1px solid black;
+    text-align: center;
+    justify-content: center;
+  }
+
+  body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 20px; /* Cambia el tamaño del texto del botón */
+    padding: 15px 20px; /* Ajusta el relleno del botón para hacerlo más grande */
+  }
+  
+  canvas {
+    border: 1px solid #000; /* Añade un borde al canvas para visualización */
+  }
+  
+  iframe {
+    width: 400px; /* Ajusta el ancho del video según tus preferencias */
+    height: 300px; /* Ajusta la altura del video según tus preferencias */
+  }
+  
