@@ -28,6 +28,8 @@ body {
 
   button {
     margin-bottom: 20px;
+    font-size: 24px; /* Tamaño del texto del botón */
+    padding: 15px 30px;
   }
 
   canvas {
