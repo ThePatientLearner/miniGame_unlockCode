@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 
 let jugador = { x: canvas.width / 2, y: canvas.height - 30, ancho: 30, alto: 30, velocidad: 5 };
 let circulos = [];
-let segundosRestantes = 70;
+let segundosRestantes = 80;
 let juegoIniciado = false;
 
 function iniciarJuego() {
@@ -97,7 +97,7 @@ function reiniciarJuego() {
   juegoIniciado = false;
   jugador.x = canvas.width / 2;
   circulos = [];
-  segundosRestantes = 70;
+  segundosRestantes = 80;
   alert("¡Perdiste! DEJA DE FEEDEAR!");
 }
 
